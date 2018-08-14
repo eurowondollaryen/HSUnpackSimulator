@@ -18,6 +18,7 @@
 			var common = 710;
 			var index = 0;
 			var cardCapacity = [ 49, 36, 27, 23 ];
+			var legendary10 = false;
 			//do not touch variables above
 			var numOfPacks = 0;
 			var sequence = 0;
@@ -36,12 +37,28 @@
 					//console.log('modified');
 				}
 
+				if(legendary10 == false && sequence <= 10 && numOfLegendary < 1) {
+					var modifiedProbs = [];
+					for(var j = 0; j < 10; ++j) {
+						modifiedProbs[j] = false;
+					}
+					for(var j = 0; j < sequence; ++j) {
+						modifiedProbs[j] = true;
+					}
+					if(modifiedProbs[Math.floor(Math.random() * 10)]) {
+						legendary10 = true;
+						result[Math.floor(Math.random() * 5)] = 'l';
+						console.log('legendary10 modified to ' + legendary10);
+					}
+				}
+
 				for(var i = 0; i < 5; ++i) {//record the result into numOf variables
 					if(result[i] == 'c') {numOfCommon++;}
 					else if (result[i] == 'r') {numOfRare++;}
 					else if (result[i] == 'e') {numOfEpic++;}
 					else {numOfLegendary++;}
 				}
+
 
 				var text = "";//text for result cards
 				for(var i = 0; i < 5; ++i) {
