@@ -8,5 +8,5 @@
 - 전설, 영웅, 희귀, 일반 등급 출현 확률은 인터넷에 알려진 평균 확률 사용
 
 ## 기술 스택
-- Backend : Node.js
-- Frontend : vanilla js
+- Backend : Node.js (express framework) - 빠른 생산성을 위해 사용
+- Frontend : vanilla js - js에 대한 이해가 필요하다고 생각해서 사용
