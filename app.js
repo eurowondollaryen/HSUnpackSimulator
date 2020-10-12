@@ -6,21 +6,23 @@ const port = process.env.PORT || 3000;
 
 var filename = 'index.html';
 
+//ejs init
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.engine("html", require("ejs").renderFile);
+
+//use public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(port, () => {
-	console.log('Server running on port 3000');
+//run server
+app.listen(port, function(){
+	console.log('Server is running on port ' + port);
 });
 
+//index page
 app.get("/", (req, res) => {
-	fs.readFile(filename, (err, data) => {
-		if(err) {
-			console.log(err);
-		}
-		else {
-			res.writeHead(200, {'Content-Type' : 'text/html'});
-			res.end(data);
-		}
+	res.render("index", {
+		data : "hello"
 	});
 });
 

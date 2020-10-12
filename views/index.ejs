@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Hearthstone Unpack Simulator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/js/main_logic.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        probabilityInit();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="container-center">
+        <h1>Hearthstone Unpack Simulator</h1>
+        <div id="initialMenu">
+          <h3>The number of packs you want to unpack : </h3>
+          <div class="form-group row">
+            <input type="number" min="1" class="form-control" style="display: inline-block; text-align: center; width: 30%;" id="numOfPacks"/>
+          </div>
+          <div class="form-group row">
+            <button class="btn" onClick="start()" style="color:black;">Start Unpack!</button>
+          </div>
+        </div>
+        <div id="result">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
