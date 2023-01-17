@@ -1,6 +1,5 @@
 # HSUnpackSimulator
 - Unpack simulator for Hearthstone
-- Application Link : [https://unpacksimulator.herokuapp.com/](https://unpacksimulator.herokuapp.com/)
 
 ## 설명
 - 게임 "하스스톤" 카드 팩 뽑기 시뮬레이팅 가능한 웹앱(확장팩 : 박사 붐의 폭심만만 프로젝트)
